@@ -157,15 +157,14 @@ public class GamePanel extends JPanel implements ActionListener {
         FontMetrics metrics2 = getFontMetrics(g.getFont());
         g.drawString("Score:" + applesEaten,(SCREEN_WIDTH - metrics2.stringWidth("Score:" + applesEaten))/2,
                 g.getFont().getSize());
-
+    }
+    public void gameRestart(Graphics g){
         //Restart Game
+        repaint();
         g.setColor(Color.red);
         g.setFont(new Font("Times New Roman",Font.BOLD, 75));
-        FontMetrics metrics3 = getFontMetrics(g.getFont());
+        FontMetrics metrics1 = getFontMetrics(g.getFont());
         g.drawString("Try Again?",(SCREEN_WIDTH - metrics1.stringWidth("Try Again?"))/2,SCREEN_WIDTH/2);
-
-
-
     }
     @Override
     public void actionPerformed(ActionEvent e) {
